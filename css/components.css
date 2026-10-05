@@ -1,0 +1,27 @@
+/* Reusable components: buttons, chips, cards, stat boxes, timeline. */
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:12px;border:1px solid var(--line);font-weight:600;font-size:15px;transition:.25s;background:var(--card);backdrop-filter:blur(8px)}
+.btn.p{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+.btn:hover{transform:translateY(-3px) scale(1.03);border-color:var(--acc);box-shadow:0 10px 30px var(--glow)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:50px}
+.stat{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.stat b{display:block;font-size:32px;color:var(--acc);line-height:1.1}.stat span{font-size:13px;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:99px;background:var(--card);transition:.2s}
+.chip:hover{border-color:var(--acc);color:var(--acc);transform:translateY(-2px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;overflow:hidden;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d;transition:transform .15s ease-out,border-color .25s,box-shadow .25s}
+.card:hover{border-color:var(--acc);box-shadow:0 20px 50px var(--glow)}
+.card::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),var(--glow),transparent 60%);opacity:0;transition:opacity .25s;pointer-events:none}
+.card:hover::after{opacity:1}
+.card>*{transform:translateZ(24px)}
+.tag{font-size:12px;color:var(--acc2)}
+.card h3{margin:6px 0 10px;font-size:21px}
+.card p{margin:0 0 14px;color:var(--mut);font-size:15px}
+.card .chip{font-size:12px;padding:3px 10px}
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.item{position:relative;padding:0 0 28px 26px}
+.item::before{content:"";position:absolute;left:-6px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--glow),0 0 18px var(--acc)}
+.item h3{margin:0;font-size:18px}.item .m{font-size:13px;color:var(--mut)}.item p{margin:6px 0 0;color:var(--mut);font-size:15px}
+.links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}

@@ -1,0 +1,27 @@
+/* Home page only: hero, ribbon, about, contact. */
+.hero{min-height:94vh;display:flex;flex-direction:column;justify-content:center;padding:70px 0 40px;perspective:900px}
+#hc{will-change:transform,opacity}
+.hello{color:var(--acc);font-size:14px}
+h1{font-size:clamp(44px,10vw,104px);line-height:1;margin:12px 0 16px;letter-spacing:-.04em;font-weight:800;perspective:700px}
+h1 .l{display:inline-block;opacity:0;transform:rotateX(-100deg) translateY(30px);transform-origin:50% 100%;animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+h1 .g .l{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.g{display:inline-block}
+@keyframes rise{to{opacity:1;transform:none}}
+.role{font-size:clamp(18px,3vw,26px);color:var(--mut);min-height:1.6em}
+.role em{color:var(--fg);font-style:normal;border-right:2px solid var(--acc);padding-right:3px}
+.lead{max-width:600px;color:var(--mut);margin:18px 0 28px}
+.scroll{margin-top:44px;font-size:12px;letter-spacing:.3em;color:var(--mut);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.ribbon{position:relative;z-index:1;overflow:hidden;border-block:1px solid var(--line);background:var(--card);backdrop-filter:blur(8px);margin:30px 0}
+.ribbon div{display:flex;width:max-content;animation:slide 32s linear infinite;padding:14px 0}
+.ribbon span{padding:0 26px;font-size:14px;color:var(--mut);white-space:nowrap}.ribbon span::after{content:"◆";margin-left:52px;color:var(--acc)}
+@keyframes slide{to{transform:translateX(-50%)}}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:34px}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 14px;color:var(--mut)}.about p strong{color:var(--fg)}
+.sk h3{font-size:12px;color:var(--mut);margin:16px 0 8px;font-weight:600;letter-spacing:.1em}.sk h3:first-child{margin-top:0}
+.contact{text-align:center;padding:90px 0 50px}
+.contact h2::after{display:none}
+.contact .big{font-size:clamp(30px,6vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:0 0 12px}
+.contact .big span{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.contact p{color:var(--mut);max-width:520px;margin:0 auto 28px}

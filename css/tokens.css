@@ -1,0 +1,5 @@
+/* Design tokens: colours for light and dark mode. Change the accent colours (--acc, --acc2) here and the whole site updates. */
+:root{--bg:#fbfbff;--fg:#0e1020;--mut:#515570;--card:rgba(255,255,255,.82);--line:rgba(30,30,90,.12);--acc:#4f46e5;--acc2:#e11d5c;--glow:rgba(79,70,229,.18);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#04060a;--fg:#e9eef3;--mut:#93a0ac;--card:rgba(12,17,23,.72);--line:rgba(255,255,255,.1);--acc:#3dd6d0;--acc2:#8b8bff;--glow:rgba(61,214,208,.2)}}
+:root[data-theme="dark"]{--bg:#04060a;--fg:#e9eef3;--mut:#93a0ac;--card:rgba(12,17,23,.72);--line:rgba(255,255,255,.1);--acc:#3dd6d0;--acc2:#8b8bff;--glow:rgba(61,214,208,.2)}

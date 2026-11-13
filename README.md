@@ -6,6 +6,7 @@ Personal portfolio site. Plain HTML, CSS and JavaScript (no build step). 3D back
 
 ```
 index.html          Home page (all the content you see on the site)
+cv.html             Your CV as a web page (edit the text in it to update the CV; use Print > Save as PDF for a PDF)
 page-template.html  Copy this to make a new page
 vercel.json         Hosting settings (clean URLs: /projects instead of /projects.html)
 css/
@@ -13,6 +14,7 @@ css/
   base.css          Reset, background, section headings
   layout.css        Container, navigation bar, footer
   components.css    Buttons, chips, cards, stat boxes, timeline
+  cv.css            Styles for the CV page
   home.css          Hero, ribbon, about and contact (home page only)
   intro.css         Opening titles (home page only)
   motion.css        Scroll animation + reduced-motion fallback (keep last)
@@ -20,7 +22,7 @@ js/
   theme.js          Light/dark toggle (loads in <head> on every page)
   effects.js        Name reveal, typing line, counters, card tilt, scroll effects
   scene.js          3D flythrough background
-assets/             Put images, your photo and PDFs (e.g. your CV) here
+assets/             Put images and your photo here
 ```
 
 ## Common edits
